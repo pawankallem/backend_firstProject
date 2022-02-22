@@ -5,11 +5,14 @@ const connect=require("./config/db");
 
 const userController=require("./controllers/user.controller");
 
+const checkingController=require("./controllers/checkin.controller")
+
 const app=express();
 
 app.use(express.json());
 
 app.use("/user",userController);
+app.use("/try",checkingController);
 
 app.listen(1122,async()=>{
     try {

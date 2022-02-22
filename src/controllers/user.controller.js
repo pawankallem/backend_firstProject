@@ -61,7 +61,7 @@ router.post("/register",
 
             const token = newToken(user);
 
-            console.log(user);
+            // console.log(user);
 
             return res.status(201).send({ token });
 
@@ -98,7 +98,7 @@ router.post("/login",
 
             const token = newToken(user);
 
-            console.log(user)
+            // console.log(user)
 
             res.send({token });
         } catch (err) {
