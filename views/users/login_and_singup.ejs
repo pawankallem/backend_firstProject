@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/testnav.css" />
+    <link rel="stylesheet" href="css/footer.css" />
+    <link rel="stylesheet" href="css/login_and_singup.css" />
+    <!-- <link rel="stylesheet" href="login/css/login_and_singup.css" /> -->
+    <script
+      src="https://kit.fontawesome.com/683b4b40e3.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div id="container">
+      <div class="devmain">
+        <div class="devbox1">
+          <div id="devlogo">
+            <img
+              src="https://www.paiinternational.in/static/assets/pai/images/logo.png"
+            />
+          </div>
+          <div id="devcartno">
+            <img
+              src="https://www.paiinternational.in/static/assets/pai/images/cart-icon.png"
+              alt=""
+            />
+          </div>
+          <div id="devlocation">
+            <img
+              src="https://www.paiinternational.in/static/assets/pai/images/location.png"
+              alt=""
+            />Location
+          </div>
+
+          <div id="devsearch">
+            <div id="devsearchflex">
+              <input
+                id="devinput"
+                type="text"
+                placeholder="Enter Name of Product Or Brands and More"
+              />
+            </div>
+          </div>
+
+          <div id="devlogin"><a href="../html/login.html" id="devbtn"></a></div>
+          <div id="devcart">
+            <img
+              src="https://www.paiinternational.in/static/assets/pai/images/cart-icon.png"
+              alt=""
+            />
+          </div>
+        </div>
+        <hr />
+
+        <nav>
+          <input type="checkbox" id="click" />
+          <label for="click" class="menu-btn">
+            <i class="fas fa-bars"></i>
+          </label>
+          <ul>
+            <li></li>
+            <div class="dropdown">
+              <button class="dropbtn">
+                <a>
+                  <img
+                    id="devassesories"
+                    src="https://www.paiinternational.in/static/assets/pai/images/cate-icon.png"
+                    alt=""
+                  />
+                  Select Catogery</a
+                >
+              </button>
+              <div class="dropdown-content">
+                <a href="">Furniture</a>
+                <a href="">Mobile and Tablet</a>
+                <a href="">Home Appliance</a>
+                <a href="">Kichen Appliances</a>
+                <a href="">Laptop & IT</a>
+                <a href="">Fashion</a>
+                <a href="">Personal Care</a>
+                <a href="">Home Entertainment</a>
+              </div>
+            </div>
+            <li>
+              <a href="#">
+                <img src="../res/gift (6).png" alt="" /> Gift Cards</a
+              >
+            </li>
+            <li>
+              <a href="#">
+                <img
+                  src="https://www.paiinternational.in/static/assets/pai/images/luckydraw.png"
+                  alt=""
+                />
+                Draw Results</a
+              >
+            </li>
+            <li>
+              <a href="#">
+                <img src="../res/deals (1).png" alt="" /> Deals Zone</a
+              >
+            </li>
+            <li>
+              <a href="../html/map.html"
+                ><img src="../res/store-locator (1).png" alt="" />
+                store-locator</a
+              >
+            </li>
+            <li>
+              <a href="../html/services.html"
+                ><img src="../res/services (1).png" alt="" /> Services</a
+              >
+            </li>
+            <li id="devappdownload">
+              <a href="#"
+                ><img src="../res/app-icon (1).png" alt="" /> Download App</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div class="content"></div>
+    </div>
+
+    <div id="login_body">
+      <div id="home_login">
+        <h4><a id="home_color" href="/index.html">Home</a></h4>
+        <h3>></h3>
+        <h4><a id="login_color" href="/html/login.html">Login</a></h4>
+      </div>
+      <div id="customer_login">
+        <div id="customer_title">
+          <h2>CUSTOMER <span>LOGIN</span></h2>
+        </div>
+
+        <div id="login_or_singup">
+          <div id="login">
+            <div id="user_login">
+              <div><h2>Login</h2></div>
+              <div>Get access to your Orders,Wishlist and Recommendations</div>
+            </div>
+            <div id="login_form">
+              <div id="google_icon">
+                <i class="fab fa-google"></i>
+              </div>
+              <div class="low_length" id="or">
+                <hr id="hr" />
+              </div>
+              <div>
+                <form action="http://localhost:1122/login" method="post">
+                  <div class="input_grid">
+                    <label>Username <span class="red_star">*</span></label>
+                    <input type="email" name="email_Id" id="email_Id" />
+
+                    <% if(typeof login_alert != "undefined") { %> <%
+                    login_alert.forEach(function (err) { %> <% if( err.param ==
+                    'email_Id') { %>
+
+                    <p id="username_alert" class="hide_alert"><%= err.msg %></p>
+
+                    <% } %> <% }) %> <% } else if (typeof user_email_message !=
+                    "undefined") { %>
+
+                    <p id="username_alert" class="hide_alert">
+                      <%= user_email_message %>
+                    </p>
+                    <% } %>
+
+                    <!-- <p id="username_alert" class="hide_alert">
+                      This field is required.
+                    </p> -->
+                  </div>
+
+                  <div>
+                    <p id="align_right">do you want to login with an otp?</p>
+                  </div>
+
+                  <div class="input_grid">
+                    <label>Password <span class="red_star">*</span></label>
+                    <input type="password" name="password" id="password" />
+
+                    <% if(typeof login_alert != "undefined") { %> <%
+                    login_alert.forEach(function (err) { %> <% if( err.param ==
+                    'password') { %>
+
+                    <p id="login_psd_alert" class="hide_alert">
+                      <%= err.msg %>
+                    </p>
+
+                    <% } %> <% }) %> <% } else if (typeof user_email_message !=
+                    "undefined") { %>
+
+                    <p id="login_psd_alert" class="hide_alert">
+                      <%= user_email_message %>
+                    </p>
+                    <% } %>
+
+                    <!-- <p id="login_psd_alert" class="hide_alert">
+                      This field is required.
+                    </p> -->
+                  </div>
+                  <div id="btn_forgot_link">
+                    <div>
+                      <input
+                        type="submit"
+                        id="sing_in"
+                        name="Submit"
+                        placeholder="SIGN IN"
+                        id="submit"
+                      />
+                    </div>
+
+                    <div>
+                      <p id="forgot_id">Forget Your Password?</p>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+
+          <!-- singup -->
+
+          <div id="singup">
+            <div id="new_account">
+              <h2>New Account</h2>
+              <p>Creating an account has many benegits</p>
+            </div>
+
+            <div id="register_form">
+              <form
+                id="form"
+                action="http://localhost:1122/login/register"
+                method="post"
+              >
+                <div class="flex_div">
+                  <div>
+                    <label>First Name <span class="red_star">*</span></label>
+                    <input
+                      type="text"
+                      name="first_Name"
+                      id="first_name"
+                      placeholder="Enter Your First Name"
+                    />
+
+                    <% if(typeof alert != "undefined") { %> <%
+                    alert.forEach(function (err) { %> <% if( err.param
+                    =='first_Name') { %>
+
+                    <p id="first_name_alert" class="hide_alert">
+                      <%= err.msg %>
+                    </p>
+
+                    <% } %> <% }) %> <% } %>
+
+                    <!-- <p id="first_name_alert" class="hide_alert">
+                      
+                    </p> -->
+                  </div>
+
+                  <div>
+                    <label>Last Name <span class="red_star">*</span></label>
+                    <input
+                      type="text"
+                      id="last_name"
+                      name="last_Name"
+                      placeholder="Enter Your Last Name"
+                    />
+
+                    <% if(typeof alert != "undefined") { %> <%
+                    alert.forEach(function (err) { %> <% if( err.param
+                    =='last_Name') { %>
+
+                    <p id="last_name_alert" class="hide_alert">
+                      <%= err.msg %>
+                    </p>
+
+                    <% } %> <% }) %> <% } %>
+
+                    <!-- <p id="last_name_alert" class="hide_alert">
+                      This field is required.
+                    </p> -->
+                  </div>
+                </div>
+
+                <div class="flex_div">
+                  <div>
+                    <label>Email ID <span class="red_star">*</span></label>
+                    <input
+                      type="email"
+                      id="reg_email"
+                      name="email_Id"
+                      placeholder="Enter Email-ID"
+                    />
+
+                    <% if(typeof alert != "undefined") { %> <%
+                    alert.forEach(function (err) { %> <% if( err.param ==
+                    'email_Id') { %>
+
+                    <p id="mail_alert" class="hide_alert"><%= err.msg %></p>
+
+                    <% } %> <% }) %> <% } else if (typeof email_message!="undefined") { %>
+
+                    <p id="mail_alert" class="hide_alert">
+                      <%= email_message %>
+                    </p>
+                    <% } %>
+
+                    <!-- <p id="mail_alert" class="hide_alert">
+                      This field is required.
+                    </p> -->
+                  </div>
+
+                  <div>
+                    <label>Mobile Number <span class="red_star">*</span></label>
+                    <input
+                      type="number"
+                      id="reg_number"
+                      name="mobile_Number"
+                      placeholder="Enter Valid Mobile Number"
+                    />
+
+                    <% if(typeof alert != "undefined") { %> <%
+                    alert.forEach(function (err) { %> <% if( err.param ==
+                    'mobile_Number' && err.msg !='Invalid value') { %>
+
+                    <p id="num_alert" class="hide_alert"><%= err.msg %></p>
+
+                    <% } %> <% }) %> <% } %>
+
+                    <!-- <p id="num_alert" class="hide_alert">
+                      This field is required.
+                    </p> -->
+                  </div>
+                </div>
+
+                <div class="flex_div">
+                  <div>
+                    <label>Password <span class="red_star">*</span></label>
+                    <input
+                      type="password"
+                      id="first_psd"
+                      name="password"
+                      placeholder="Enter Password"
+                    />
+
+                    <% if(typeof alert != "undefined") { %> <%
+                    alert.forEach(function (err) { %> <% if( err.param ==
+                    'password') { %>
+
+                    <p id="put_psd_alert" class="hide_alert"><%= err.msg %></p>
+
+                    <% } %> <% }) %> <% } else if (typeof message !="undefined") { %>
+
+                    <p id="put_psd_alert" class="hide_alert"><%= message %></p>
+                    <% } %>
+
+                    <!-- <p id="put_psd_alert" class="hide_alert">
+                      This field is required.
+                    </p> -->
+                  </div>
+
+                  <div>
+                    <label
+                      >Confirm Password <span class="red_star">*</span></label
+                    >
+                    <input
+                      type="password"
+                      id="second_psd"
+                      name="confirm_password"
+                      placeholder="Password(Again)"
+                    />
+
+                    <% if(typeof alert != "undefined") { %> <%
+                    alert.forEach(function (err) { %> <% if( err.param ==
+                    'confirm_password') { %>
+
+                    <p id="cofirm_psd_alert" class="hide_alert">
+                      <%= err.msg %>
+                    </p>
+
+                    <% } %> <% }) %> <% } else if (typeof message !="undefined")
+                    { %>
+
+                    <p id="cofirm_psd_alert" class="hide_alert">
+                      <%= message %>
+                    </p>
+                    <% } %>
+
+                    <!-- <p id="cofirm_psd_alert" class="hide_alert">
+                      This field is required.
+                    </p> -->
+                  </div>
+                </div>
+
+                <div id="reg_btn">
+                  <input
+                    
+                    type="submit"
+                    name="Submit"
+                    id="register"
+                    placeholder="REGISTER"
+                  />
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="footer">
+      <footer class="footer">
+        <div class="devcontainer">
+          <div class="devrow">
+            <div class="footer-col">
+              <h4>About</h4>
+              <ul>
+                <li><a href="">Pie Stories</a></li>
+                <li><a href="">Contact Us</a></li>
+                <li><a href="">About Us</a></li>
+              </ul>
+            </div>
+            <div class="footer-col">
+              <h4>Help</h4>
+              <ul>
+                <li><a href="">Shipping</a></li>
+                <li><a href="">Cancellatioin and Return</a></li>
+                <li><a href="">Ewaste Management</a></li>
+              </ul>
+            </div>
+            <div class="footer-col">
+              <h4>Policy</h4>
+              <ul>
+                <li><a href="">Privacy</a></li>
+                <li><a href="">Terms Of Use</a></li>
+                <li><a href="">Return Policy</a></li>
+              </ul>
+            </div>
+            <div class="footer-col">
+              <h4>Social</h4>
+              <ul>
+                <li><a href="">Facebook</a></li>
+                <li><a href="">Twitter</a></li>
+                <li><a href="">Youtube</a></li>
+                <li><a href="">Instagram</a></li>
+              </ul>
+            </div>
+            <div class="footer-col">
+              <h4>Mail Us</h4>
+              <ul>
+                <li>
+                  <a style="font-size: 13px" href=""
+                    >helpline@paiinternational.in</a
+                  >
+                </li>
+                <li><a href="">phone</a></li>
+                <li>
+                  <a style="font-size: 13px" href=""
+                    >Bangalore: 080 42464343 (10 AM - 7 PM)</a
+                  >
+                </li>
+                <li>
+                  <a style="font-size: 13px" href="">
+                    Hyderabad: 040 42464343 (10 AM - 7 PM)</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <div class="footer-col">
+              <h4>Registered Adress</h4>
+              <ul>
+                <li>
+                  <a href=""
+                    >Pai International Electronics Ltd. # 28/1A, 100 Feet Road,
+                    Near CMH Road, Indiranagar, Bangalore – 560 038.</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </footer>
+      <div id="devlast">
+        <div id="devlast1">
+          <div class="devrightres">
+            Pai International © 2022. All right reserved
+          </div>
+          <div>
+            <img
+              src="https://www.paiinternational.in/static/assets/pai/images/american-express.png"
+              alt=""
+            />
+          </div>
+          <div>
+            <img
+              src="https://www.paiinternational.in/static/assets/pai/images/mastercard.png"
+              alt=""
+            />
+          </div>
+          <div>
+            <img
+              src="https://www.paiinternational.in/static/assets/pai/images/visa.png"
+              alt=""
+            />
+          </div>
+          <div>
+            <img
+              src="https://www.paiinternational.in/static/assets/pai/images/netbanking.png"
+              alt=""
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      function navbar() {
+        console.log("hi");
+      }
+    </script>
+  </body>
+</html>
